@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{30E959A7-21EA-47B4-BE0F-D6D0E565629B}"
+	ProjectSection(SolutionItems) = preProject
+		home.html = home.html
+		main.js = main.js
+		Js\three.js = Js\three.js
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AC571C3B-441A-4DD6-BEB5-2218FD0E12A0}
+	EndGlobalSection
+EndGlobal
