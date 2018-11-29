@@ -1,9 +1,59 @@
 ﻿<!doctype html>
 <html>
 <head>
-    <title>Hello Webpack</title>
+    <title>3JS Test</title>
 </head>
 <body>
+    <script src=https://github.com/mrdoob/three.js/blob/master/examples/js/WebGL.js"></script></script>
+    <script src="GLTFLoader.js"></script>
+    <div id="info">The Cube is spinning</div>
+    <style>
+        body {
+            font-family: Impact;
+            background-color: #000;
+            color: #fff;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            z-index: 100;
+            display: block;
+        }
+
+            #info a, .button {
+                color: #f00;
+                font-weight: bold;
+                text-decoration: underline;
+                cursor: pointer
+            }
+    </style>
+    <script id="vs" type="x-shader/x-vertex">
+        #version 300 es
+
+        void main() {
+
+        gl_Position = projectionMatrix * modelViewMatrix * vec4( position, 1.0 );
+
+        }
+    </script>
+    <script id="fs" type="x-shader/x-fragment">
+        #version 300 es
+
+        precision highp float;
+        precision highp int;
+        out vec4 out_FragColor;
+
+        void main() {
+
+        out_FragColor = vec4( 1.0 );
+
+        }
+    </script>
     <script src="bundle.js"></script>
 </body>
 </html>

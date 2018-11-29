@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+require('../js/GLTFLoader');
 
 //set up scene
 const scene = new THREE.Scene();
@@ -25,4 +26,32 @@ var animate = function () {
 };
 
 
-animate();
+if (WEBGL.isWebGL2Available()) {
+    // Initiate function or other initializations here
+    animate();
+} else {
+    var warning = WEBGL.getWebGL2ErrorMessage();
+    document.getElementById('container').appendChild(warning);
+}
+
+var canvas = document.createElement( 'canvas' );
+var context = canvas.getContext( 'webgl2' );
+var renderer = new THREE.WebGLRenderer( { canvas: canvas, context: context } );
+
+var material = new THREE.ShaderMaterial( {
+    vertexShader: document.getElementById( 'vs' ).textContent.trim(),
+    fragmentShader: document.getElementById( 'fs' ).textContent.trim()
+});
+
+var loader = new THREE.GLTFLoader();
+
+loader.load('path/to/model.glb', function (gltf) {
+
+    scene.add(gltf.scene);
+
+}, undefined, function (error) {
+
+    console.error(error);
+
+});
+

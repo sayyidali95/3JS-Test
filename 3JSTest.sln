@@ -24,6 +24,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dist", "dist", "{810CF18B-0
 		dist\index.html = dist\index.html
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "shaders", "shaders", "{D4219A91-1C89-45FD-B773-3863B32CF50F}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -31,6 +33,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{638D14DD-FE61-4845-A426-C2D8D19A1C96} = {30E959A7-21EA-47B4-BE0F-D6D0E565629B}
 		{810CF18B-0F6E-4665-AD0B-48BA68313743} = {30E959A7-21EA-47B4-BE0F-D6D0E565629B}
+		{D4219A91-1C89-45FD-B773-3863B32CF50F} = {30E959A7-21EA-47B4-BE0F-D6D0E565629B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AC571C3B-441A-4DD6-BEB5-2218FD0E12A0}

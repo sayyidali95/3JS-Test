@@ -5,7 +5,7 @@ const people = [
   },
   {
       manager: "Jen",
-      name: "Sue"
+      name: "Sam"
   },
   {
       manager: "Bob",
