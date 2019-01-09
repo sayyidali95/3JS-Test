@@ -3,6 +3,7 @@ require('../js/loaders/GLTFLoader');
 //set up scene
 const scene = new THREE.Scene();
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+var raycaster = new THREE.Raycaster();
 
 var renderer = new THREE.WebGLRenderer();
 renderer.setSize(window.innerWidth, window.innerHeight);
@@ -10,11 +11,15 @@ document.body.appendChild(renderer.domElement);
 
 //Add cube
 var geometry = new THREE.BoxGeometry(1, 1, 1);
+var boundingBox = new THREE.SphereGeometry(5, 32, 32);
 var material = new THREE.MeshPhongMaterial({ color: 0xff0000 });
+var wireframeMat = new THREE.MeshBasicMaterial({ wireframe: true, color: 0x0000ff});
 var cube = new THREE.Mesh(geometry, material);
+var collisionCube = new THREE.Mesh(boundingBox, wireframeMat);
 var clock = new THREE.Clock();
 //var model;
 scene.add(cube);
+scene.add(collisionCube);
 
 camera.position.z = 5;
 
